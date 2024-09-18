@@ -1,0 +1,87 @@
+/* Container styling */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  h2 {
+    text-align: center;
+    color: #333;
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Labels */
+  label {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Inputs */
+  input[type="number"],
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  input[type="number"]:focus {
+    border-color: #333;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Submit Button */
+  button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  /* Error messages */
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  /* Display section after submission */
+  h3 {
+    font-family: 'Georgia', serif;
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+  }
+  

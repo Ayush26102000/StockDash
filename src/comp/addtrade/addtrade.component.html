@@ -1,0 +1,69 @@
+<div class="container">
+    <h2>Trade Input Form</h2>
+    <form #tradeForm="ngForm" (ngSubmit)="onSubmit(tradeForm)">
+      <!-- Entry Price -->
+      <div class="form-group">
+        <label for="entryPrice">Entry Price:</label>
+        <input
+          type="number"
+          id="entryPrice"
+          name="entryPrice"
+          class="form-control"
+          [(ngModel)]="trade.entryPrice"
+          required
+          #entryPrice="ngModel"
+        />
+        <div *ngIf="entryPrice.invalid && entryPrice.touched" class="error">
+          Entry Price is required.
+        </div>
+      </div>
+  
+      <!-- Target -->
+      <div class="form-group">
+        <label for="target">Target:</label>
+        <input
+          type="number"
+          id="target"
+          name="target"
+          class="form-control"
+          [(ngModel)]="trade.target"
+          required
+          #target="ngModel"
+        />
+        <div *ngIf="target.invalid && target.touched" class="error">
+          Target is required.
+        </div>
+      </div>
+  
+      <!-- Stop Loss -->
+      <div class="form-group">
+        <label for="stopLoss">Stop Loss:</label>
+        <input
+          type="number"
+          id="stopLoss"
+          name="stopLoss"
+          class="form-control"
+          [(ngModel)]="trade.stopLoss"
+          required
+          #stopLoss="ngModel"
+        />
+        <div *ngIf="stopLoss.invalid && stopLoss.touched" class="error">
+          Stop Loss is required.
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary" [disabled]="tradeForm.invalid">
+        Submit
+      </button>
+    </form>
+  
+    <!-- Display Form Data -->
+    <div *ngIf="submitted">
+      <h3>Trade Details:</h3>
+      <p>Entry Price: {{ trade.entryPrice }}</p>
+      <p>Target: {{ trade.target }}</p>
+      <p>Stop Loss: {{ trade.stopLoss }}</p>
+    </div>
+  </div>
+  
