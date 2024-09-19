@@ -1,87 +1,126 @@
-/* Container styling */
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Apply Montserrat font globally */
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background styling */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Light modern gradient */
+}
+
+.maincomp{
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container styling for the form */
 .container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  border: 2px solid #e5eaf0; /* Subtle border */
+  animation: fadeIn 1s ease-in; /* Smooth entrance animation */
+}
+
+/* Header */
+h2 {
+  text-align: center;
+  color: #1a3e72;
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* Inputs */
+input[type="number"],
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #a9c9e7;
+  border-radius: 8px;
+  margin-top: 7px;
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+input[type="number"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0px 0px 7px rgba(0, 128, 255, 0.3);
+}
+
+/* Submit Button */
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #357ab7;
+  transform: translateY(-2px); /* Subtle hover effect */
+}
+
+/* Error messages */
+.error {
+  color: #d9534f;
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+/* Display section after submission */
+h3 {
+  color: #1a3e72;
+  text-align: center;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
   }
-  
-  /* Header */
-  h2 {
-    text-align: center;
-    color: #333;
-    font-family: 'Georgia', serif;
-    font-size: 28px;
-    margin-bottom: 20px;
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  /* Form group */
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  /* Labels */
-  label {
-    font-family: 'Georgia', serif;
-    font-size: 16px;
-    color: #333;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  /* Inputs */
-  input[type="number"],
-  button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 5px;
-  }
-  
-  input[type="number"]:focus {
-    border-color: #333;
-    outline: none;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Submit Button */
-  button {
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
-  
-  /* Error messages */
-  .error {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-  }
-  
-  /* Display section after submission */
-  h3 {
-    font-family: 'Georgia', serif;
-    color: #333;
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  p {
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-  }
-  
+}
